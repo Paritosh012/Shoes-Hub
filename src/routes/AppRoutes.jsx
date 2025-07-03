@@ -14,6 +14,7 @@ const AppRoutes = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="*" element={<h2>404 Not Found</h2>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,13 @@
-// src/components/MyNavbar.jsx
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { useState } from "react";
+import {
+  Navbar,
+  Nav,
+  Container,
+  Form,
+  Row,
+  Col,
+  Button,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const MyNavbar = () => {
@@ -13,7 +21,7 @@ const MyNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto align-items-center">
             <Nav.Link as={Link} to="/login">
               Login
             </Nav.Link>

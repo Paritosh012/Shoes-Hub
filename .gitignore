@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# GIT Push Commands
+git remote add origin https://github.com/Paritosh012/Shoes-Hub.git
+git branch -M master
+git push -u origin master
