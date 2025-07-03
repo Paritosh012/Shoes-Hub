@@ -25,5 +25,6 @@ dist-ssr
 
 # GIT Push Commands
 git remote add origin https://github.com/Paritosh012/Shoes-Hub.git
+git commit -m "second commit"
 git branch -M master
 git push -u origin master
