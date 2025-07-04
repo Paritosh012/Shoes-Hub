@@ -1,22 +1,20 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Carousel from "react-bootstrap/Carousel";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addtoCart } from "../redux/cardtSlice";
 
 const Home = () => {
-  const [myData, setMyData] = useState([]);
-  const [selectedBrand, setSelectedBrand] = useState("All");
-  let nav = useNavigate();
+  const [product, setProduct] = useState([]);
 
   const loadData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/products");
-      setMyData(res.data);
-    } catch (err) {
-      console.error("Failed to fetch products:", err);
+      const res = await axios.get("http://localhost:3000/nike");
+      setProduct(res.data);
+    } catch (error) {
+      console.error("Failed to fetch products", error);
     }
   };
 
@@ -24,92 +22,93 @@ const Home = () => {
     loadData();
   }, []);
 
-  const filteredData =
-    selectedBrand === "All"
-      ? myData
-      : myData.filter(
-          (product) =>
-            product.brand.toLowerCase() === selectedBrand.toLowerCase()
-        );
+  const myNav = useNavigate();
 
-  const viewProd = (id) => {
-    nav(`/product/${id}`);
+  const toViewProduct = (id) => {
+    myNav(`/product/${id}`);
   };
 
-  const dispatch = useDispatch();
-
-  const filteredProducts = filteredData.map((product) => (
-    <Card key={product.id} style={{ width: "18rem" }}>
-      <Card.Img
-        variant="top"
-        src={product.image}
-        style={{ height: "200px", objectFit: "contain" }}
-      />
-      <Card.Body>
-        <Card.Title>{product.title}</Card.Title>
-        <Card.Text>
-          Category: {product.category}
-          <br />
-          Brand: {product.brand}
-          <br />
-          Price: ₹{product.price}
-        </Card.Text>
-        <Button
-          variant="primary"
-          className="me-2"
-          onClick={() => viewProd(product.id)}
-        >
-          View Product
-        </Button>
-        <Button
-          variant="success"
-          onClick={() => {
-            dispatch(
-              addtoCart({
-                id: product.id,
-                title: product.title,
-                description: product.description,
-                category: product.category,
-                price: product.price,
-                image: product.image,
-              })
-            );
-          }}
-        >
-          Add to Cart
-        </Button>
-      </Card.Body>
-    </Card>
-  ));
-
-  return (
-    <>
-      <h1 align="center">Shop by Brands</h1>
-
-      <div style={{ textAlign: "center", marginBottom: "20px" }}>
-        <select
-          onChange={(e) => setSelectedBrand(e.target.value)}
-          value={selectedBrand}
-        >
-          <option value="All">All Brands</option>
-          <option value="Nike">Nike</option>
-          <option value="Puma">Puma</option>
-          <option value="Adidas">Adidas</option>
-          <option value="Redbook">Redbook</option>
-          <option value="Campus">Campus</option>
-        </select>
-      </div>
-
+  const ans = product.map((item) => (
+    <Carousel.Item
+      key={item.id}
+      onClick={() => {
+        toViewProduct(item.id);
+      }}
+    >
       <div
         style={{
+          width: "100%",
+          height: "500px",
+          backgroundColor: "#f5f5f5",
           display: "flex",
-          flexWrap: "wrap",
-          gap: "20px",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        {filteredProducts}
+        <img
+          src={item.image}
+          alt={item.title}
+          style={{
+            maxHeight: "100%",
+            maxWidth: "100%",
+            objectFit: "contain",
+          }}
+        />
       </div>
+      <Carousel.Caption
+        style={{
+          background: "rgba(0, 0, 0, 0.5)",
+          padding: "10px 20px",
+          borderRadius: "10px",
+          bottom: "0px",
+        }}
+      >
+        <h5>{item.title}</h5>
+        <p>
+          {item.brand} — ₹{item.price}
+        </p>
+      </Carousel.Caption>
+    </Carousel.Item>
+  ));
+  return (
+    <>
+      <h1>Shop by Brand</h1>
+      <Carousel
+        controls={true}
+        indicators={false}
+        interval={3000}
+        fade={false}
+        nextIcon={
+          <span
+            aria-hidden="true"
+            style={{
+              fontSize: "2.5rem",
+              color: "black",
+              padding: "10px",
+            }}
+          >
+            ›
+          </span>
+        }
+        prevIcon={
+          <span
+            aria-hidden="true"
+            style={{
+              fontSize: "2.5rem",
+              color: "black",
+              padding: "10px",
+            }}
+          >
+            ‹
+          </span>
+        }
+        style={{
+          width: "100%",
+          maxHeight: "500px",
+        }}
+      >
+        {ans}
+      </Carousel>
     </>
   );
 };

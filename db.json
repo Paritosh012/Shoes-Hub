@@ -1,121 +1,76 @@
 {
-  "products": [
+  "nike": [
     {
       "id": 1,
-      "title": "Nike Air Max 90",
-      "description": "Classic comfort with a modern look.",
-      "price": 129.99,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/90cd04cb-f20c-437b-b419-3fd4024d8e6d/air-max-90-shoes-nWbnrD.png",
-      "category": "Men",
-      "brand": "Nike"
+      "title": "NIKE AIR MAX 90",
+      "desc": "Lace up and feel the legacy. Produced at the cross section of art, music and culture",
+      "price": "10795/-",
+      "brand": "Nike",
+      "image": "/NIKEAIRMAX90-01.avif"
     },
     {
       "id": 2,
-      "title": "Nike Air Zoom Pegasus",
-      "description": "Responsive running shoes built for speed.",
-      "price": 109.99,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/4d17027c-5e5a-49f6-8b98-f327e3b06648/air-zoom-pegasus-41-road-running-shoes-jSvxFR.png",
-      "category": "Women",
-      "brand": "Nike"
+      "title": "NIKE AIR JORDAN 1 LOW",
+      "desc": "Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's familiar yet always fresh.",
+      "price": "₹ 8995.00/-",
+      "brand": "Nike",
+      "image": "/NIKEAIRJORDAN1LOW-01.avif"
     },
     {
       "id": 3,
-      "title": "Nike Blazer Mid '77",
-      "description": "Vintage style meets modern comfort.",
-      "price": 99.99,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/026dcbf9-3df2-4097-99fc-b5a19480c7db/blazer-mid-77-shoes-bw30XG.png",
-      "category": "Unisex",
-      "brand": "Nike"
+      "title": "PHANTOM 6 LOW ELITE LE FG",
+      "desc": "Obsessed with accuracy? Us too. That's why we designed the Phantom 6 Elite with revolutionary Gripknit to power your precision.",
+      "price": " ₹ 24 895.00/-",
+      "brand": "Nike",
+      "image": "/PHANTOM+6+LOW+ELITE+LE+FG-01.avif"
     },
     {
       "id": 4,
-      "title": "Nike Air Force 1 '07",
-      "description": "Timeless style with fresh details.",
-      "price": 119.99,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1fbe6780-8af4-43ea-91b5-0eb33f4290b4/air-force-1-07-shoes-GjGXSP.png",
-      "category": "Unisex",
-      "brand": "Nike"
+      "title": "Nike Structure 26",
+      "desc": "The supportive cushioning in the Structure 26 provides steadiness for everyday runs.",
+      "price": "₹ 11,895.00/-",
+      "brand": "Nike",
+      "image": "/NIKE+STRUCTURE+26.avif"
     },
     {
       "id": 5,
-      "title": "Adidas Ultraboost Light",
-      "description": "Responsive, lightweight running shoe.",
-      "price": 149.99,
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/8b3f6b30245b4d4db3d9af2a015bfac1_9366/Ultraboost_Light_Shoes_White_ID9682_01_standard.jpg",
-      "category": "Men",
-      "brand": "Adidas"
+      "title": "Nike Metcon 9 AMP",
+      "desc": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap.",
+      "price": " ₹ 12 795.00/-",
+      "brand": "Nike",
+      "image": "/M+NIKE+METCON+9+AMP.avif"
     },
     {
       "id": 6,
-      "title": "Puma RS-X Efekt",
-      "description": "Retro style with modern cushioning.",
-      "price": 109.99,
-      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/390777/01/sv01/fnd/IND/fmt/png",
-      "category": "Unisex",
-      "brand": "Puma"
+      "title": "Nike Court Vision Low",
+      "desc": "In love with the classic look of '80s basketball, but have a thing for the fast-paced culture of today's game? Meet the Court Vision Low.",
+      "price": "₹ 7 095.00/-",
+      "brand": "Nike",
+      "image": "/NIKE+COURT+VISION+LO.avif"
     },
     {
       "id": 7,
-      "title": "Reebok Nano X3",
-      "description": "Versatile training shoes.",
-      "price": 119.99,
-      "image": "https://assets.reebok.com/images/w_600,f_auto,q_auto/92a8ea74022e44eea31baf95010c2c6a_9366/Nano_X3_Shoes_Black_HQ2180_01_standard.jpg",
-      "category": "Men",
-      "brand": "Reebok"
+      "title": "Nike Vapor Pro 3",
+      "desc": "The Vapor Pro 3 provides bounce and burst from side-to-side movements to scrambles to the net, so you can stay in the point. ",
+      "price": "₹ 10 795.0/-",
+      "brand": "Nike",
+      "image": "/M+NIKE+METCON+9+AMP.avif"
     },
     {
       "id": 8,
-      "title": "Nike React Infinity Run",
-      "description": "Supportive running shoes for long distances.",
-      "price": 139.99,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7bb5b3c2-90f2-49ee-96e8-31c1bcf49340/react-infinity-run-flyknit-3-road-running-shoes-VD66cF.png",
-      "category": "Men",
-      "brand": "Nike"
+      "title": "Nike LD-1000",
+      "desc": "The dramatically flared heel on the LD-1000 was originally created to support long-distance runners.",
+      "price": "₹ 8695.00/-",
+      "brand": "Nike",
+      "image": "/LD-1000.avif"
     },
     {
       "id": 9,
-      "title": "Nike Court Vision",
-      "description": "Basketball-inspired everyday sneaker.",
-      "price": 79.99,
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b6bb6d34-f158-48b5-8506-e39d263f51e0/court-vision-low-shoes-dvlM7J.png",
-      "category": "Unisex",
-      "brand": "Nike"
-    },
-    {
-      "id": 10,
-      "title": "Adidas Superstar",
-      "description": "Timeless design with street-ready vibes.",
-      "price": 89.99,
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/3db9791c84194f27a92dafb7011b7c79_9366/Superstar_Shoes_White_EG4958_01_standard.jpg",
-      "category": "Unisex",
-      "brand": "Adidas"
-    },
-    {
-      "id": 11,
-      "title": "Adidas Gazelle",
-      "description": "Classic style with soft suede.",
-      "price": 99.99,
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/f93b74576f3643149e3baf1d00d36763_9366/Gazelle_Shoes_Grey_ID0719_01_standard.jpg",
-      "category": "Women",
-      "brand": "Adidas"
-    },
-    {
-      "id": 12,
-      "title": "Puma Smash v2",
-      "description": "Tennis-inspired casual shoes.",
-      "price": 59.99,
-      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/365215/01/sv01/fnd/IND/fmt/png",
-      "category": "Unisex",
-      "brand": "Puma"
-    },
-    {
-      "id": 13,
-      "title": "Puma Future Rider",
-      "description": "Colorful retro running sneakers.",
-      "price": 89.99,
-      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/371149/01/sv01/fnd/IND/fmt/png",
-      "category": "Unisex",
-      "brand": "Puma"
+      "title": "Nike Air Pegasus Wave",
+      "desc": "Meet the Pegasus Wave—an edgy take on the Air Pegasus. Drawing inspiration from Y2K aesthetics, it features a mash-up of materials loaded with depth, dimension and heritage running style.",
+      "price": "₹ 14 247.00/-",
+      "brand": "Nike",
+      "image": "/NIKE+AIR+PEGASUS+WAVE.avif"
     }
   ],
   "users": [],
