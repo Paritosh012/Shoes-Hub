@@ -55,6 +55,7 @@ const ViewProduct = () => {
                     price: product.price,
                     image: product.image,
                     brand: product.brand,
+                    quantity: product.quantity,
                   };
                   dispatch(addtoCart(productInfo));
                 }}

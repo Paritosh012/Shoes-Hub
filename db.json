@@ -4,75 +4,84 @@
       "id": 1,
       "title": "NIKE AIR MAX 90",
       "desc": "Lace up and feel the legacy. Produced at the cross section of art, music and culture",
-      "price": "10795/-",
+      "price": 10795,
       "brand": "Nike",
-      "image": "/NIKEAIRMAX90-01.avif"
+      "image": "/NIKEAIRMAX90-01.avif",
+      "quantity": 1
     },
     {
       "id": 2,
       "title": "NIKE AIR JORDAN 1 LOW",
       "desc": "Inspired by the original that debuted in 1985, the Air Jordan 1 Low offers a clean, classic look that's familiar yet always fresh.",
-      "price": "₹ 8995.00/-",
+      "price": 8995.0,
       "brand": "Nike",
-      "image": "/NIKEAIRJORDAN1LOW-01.avif"
+      "image": "/NIKEAIRJORDAN1LOW-01.avif",
+      "quantity": 1
     },
     {
       "id": 3,
       "title": "PHANTOM 6 LOW ELITE LE FG",
       "desc": "Obsessed with accuracy? Us too. That's why we designed the Phantom 6 Elite with revolutionary Gripknit to power your precision.",
-      "price": " ₹ 24 895.00/-",
+      "price": 24895.0,
       "brand": "Nike",
-      "image": "/PHANTOM+6+LOW+ELITE+LE+FG-01.avif"
+      "image": "/PHANTOM+6+LOW+ELITE+LE+FG-01.avif",
+      "quantity": 1
     },
     {
       "id": 4,
       "title": "Nike Structure 26",
       "desc": "The supportive cushioning in the Structure 26 provides steadiness for everyday runs.",
-      "price": "₹ 11,895.00/-",
+      "price": 11895.0,
       "brand": "Nike",
-      "image": "/NIKE+STRUCTURE+26.avif"
+      "image": "/NIKE+STRUCTURE+26.avif",
+      "quantity": 1
     },
     {
       "id": 5,
       "title": "Nike Metcon 9 AMP",
       "desc": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap.",
-      "price": " ₹ 12 795.00/-",
+      "price": 12795.0,
       "brand": "Nike",
-      "image": "/M+NIKE+METCON+9+AMP.avif"
+      "image": "/M+NIKE+METCON+9+AMP.avif",
+      "quantity": 1
     },
     {
       "id": 6,
       "title": "Nike Court Vision Low",
       "desc": "In love with the classic look of '80s basketball, but have a thing for the fast-paced culture of today's game? Meet the Court Vision Low.",
-      "price": "₹ 7 095.00/-",
+      "price": 7095.0,
       "brand": "Nike",
-      "image": "/NIKE+COURT+VISION+LO.avif"
+      "image": "/NIKE+COURT+VISION+LO.avif",
+      "quantity": 1
     },
     {
       "id": 7,
       "title": "Nike Vapor Pro 3",
       "desc": "The Vapor Pro 3 provides bounce and burst from side-to-side movements to scrambles to the net, so you can stay in the point. ",
-      "price": "₹ 10 795.0/-",
+      "price": 10795.0,
       "brand": "Nike",
-      "image": "/M+NIKE+METCON+9+AMP.avif"
+      "image": "/M+NIKE+METCON+9+AMP.avif",
+      "quantity": 1
     },
     {
       "id": 8,
       "title": "Nike LD-1000",
       "desc": "The dramatically flared heel on the LD-1000 was originally created to support long-distance runners.",
-      "price": "₹ 8695.00/-",
+      "price": 8695.0,
       "brand": "Nike",
-      "image": "/LD-1000.avif"
+      "image": "/LD-1000.avif",
+      "quantity": 1
     },
     {
       "id": 9,
       "title": "Nike Air Pegasus Wave",
       "desc": "Meet the Pegasus Wave—an edgy take on the Air Pegasus. Drawing inspiration from Y2K aesthetics, it features a mash-up of materials loaded with depth, dimension and heritage running style.",
-      "price": "₹ 14 247.00/-",
+      "price": 14247.0,
       "brand": "Nike",
-      "image": "/NIKE+AIR+PEGASUS+WAVE.avif"
+      "image": "/NIKE+AIR+PEGASUS+WAVE.avif",
+      "quantity": 1
     }
   ],
-  "users": [],
+
   "cart": []
 }

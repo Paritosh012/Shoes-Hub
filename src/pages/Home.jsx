@@ -1,8 +1,6 @@
+import "./Home.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
 import { useNavigate } from "react-router-dom";
 
@@ -28,13 +26,14 @@ const Home = () => {
     myNav(`/product/${id}`);
   };
 
-  const ans = product.map((item) => (
+  const brandCorousal = product.map((item) => (
     <Carousel.Item
       key={item.id}
       onClick={() => {
         toViewProduct(item.id);
       }}
     >
+    
       <div
         style={{
           width: "100%",
@@ -63,7 +62,7 @@ const Home = () => {
           bottom: "0px",
         }}
       >
-        <h5>{item.title}</h5>
+        <h5>  {item.title}</h5>
         <p>
           {item.brand} — ₹{item.price}
         </p>
@@ -107,7 +106,7 @@ const Home = () => {
           maxHeight: "500px",
         }}
       >
-        {ans}
+        {brandCorousal}
       </Carousel>
     </>
   );

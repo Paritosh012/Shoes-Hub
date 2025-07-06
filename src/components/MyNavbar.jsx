@@ -6,7 +6,7 @@ const MyNavbar = () => {
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
-          <i className="fa-brands fa-stripe-s"></i>
+          <i className="fa-brands fa-stripe-s"></i> Shoe-Hub
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -14,7 +14,7 @@ const MyNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
             <Nav.Link as={Link} to="/cart">
-              Cart
+              <i className="fa-solid fa-cart-shopping"></i>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

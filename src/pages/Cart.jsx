@@ -1,58 +1,108 @@
-import { Container, Row, Col, Button, Form, Card } from "react-bootstrap";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Button, Table } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { Increase, Decrease, removeItem } from "../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  return (
-    <Container className="py-5">
-      <h2 className="mb-4">Your Shopping Cart</h2>
+  const [cartData, setCartdata] = useState([]);
+  const dispatch = useDispatch();
+  const CartData = useSelector((state) => state.mycart.cart);
+  const navigate = useNavigate();
 
-      <Row className="mb-4">
-        <Col md={8}>
-          {[1, 2].map((item, idx) => (
-            <Card key={idx} className="mb-3 p-3 shadow-sm">
-              <Row className="align-items-center">
-                <Col md={3}>
-                  <img
-                    src="/your-image-path.avif"
-                    alt="Product"
-                    className="img-fluid rounded"
-                  />
-                </Col>
-                <Col md={6}>
-                  <h5 className="mb-1">Product Title</h5>
-                  <p className="text-muted mb-2">Brand Name</p>
-                  <p className="text-success fw-semibold">₹ Price</p>
-                </Col>
-                <Col md={3} className="text-md-end text-center">
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter quantity..."
-                    id="inputPassword5"
-                    aria-describedby="passwordHelpBlock"
-                  />
-                  <Button variant="danger" size="sm">
-                    <i className="fa-solid fa-trash-can me-1"></i> Remove
-                  </Button>
-                </Col>
-              </Row>
-            </Card>
-          ))}
-        </Col>
+  const loadData = async () => {
+    let api = `http://localhost:3000/cart`;
+    let res = await axios.get(api);
+    setCartdata(res.data);
+  };
 
-        <Col md={4}>
-          <Card className="p-4 shadow-sm">
-            <h5 className="mb-3">Summary</h5>
-            <div className="d-flex justify-content-between mb-2">
-              <span>Subtotal</span>
-              <span>₹ Total</span>
-            </div>
-            <hr />
-            <Button variant="success" className="w-100">
-              Proceed to Checkout
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  let netAmount = 0;
+
+  const ans = CartData.map((key) => {
+    netAmount += key.price * key.quantity;
+    return (
+      <> 
+        <tr>
+          <td>
+            <img
+              style={{ width: "7rem", height: "15vh" }}
+              src={key.image}
+              alt={key.title}
+            />
+          </td>
+          <td> {key.title} </td>
+          <td> {key.brand} </td>
+          <td> {key.price} </td>
+          <td>
+            <i
+              style={{ marginRight: "20px", cursor: "pointer" }}
+              onClick={() => {
+                dispatch(Increase({ id: key.id }));
+              }}
+              className="fa-solid fa-plus"
+            ></i>
+            {key.quantity}
+            <i
+              style={{ marginLeft: "20px", cursor: "pointer" }}
+              onClick={() => {
+                dispatch(Decrease({ id: key.id }));
+              }}
+              class="fa-solid fa-minus"
+            ></i>
+            <Button
+              style={{ marginLeft: "10px" }}
+              variant="primary"
+              onClick={() => {
+                dispatch(removeItem({ id: key.id }));
+              }}
+            >
+              Remove
             </Button>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          </td>
+          <td>{key.price * key.quantity}</td>
+        </tr>
+      </>
+    );
+  });
+
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          padding: "20px",
+          justifyContent: "space-between",
+        }}
+      >
+        <h2>Total Amount : {netAmount} </h2>
+        <Button
+          variant="warning"
+          onClick={() => {
+            navigate("/checkout");
+          }}
+        >
+          CheckOut
+        </Button>
+      </div>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Amount</th>
+          </tr>
+        </thead>
+        <tbody>{ans}</tbody>
+      </Table>
+    </>
   );
 };
 
