@@ -82,6 +82,87 @@
       "quantity": 1
     }
   ],
-
-  "cart": []
+  "puma": [
+    {
+      "id": 10,
+      "title": "BMW MMS Inverse M4 Hero",
+      "desc": "PUMA x BMW M MOTORSPORT returns with a collection inspired by the latest evolution of the BMW M4 GT4 EVO.",
+      "price": 11999,
+      "brand": "Puma",
+      "image": "/Puma-01.avif",
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "title": "Palermo Club Vegas Leather Sneakers",
+      "desc": "Straight from the strip to the streets, the Palermo Club Vegas brings iconic terrace style to the Las Vegas spotlight.",
+      "price": 9999,
+      "brand": "Puma",
+      "image": "/Puma-02.avif",
+      "quantity": 1
+    },
+    {
+      "id": 12,
+      "title": "Majesty Everyday Comfortable Sneakers",
+      "desc": "Crafted for street kings and court queens, the Majesty steps out with a sleek leather upper and refined tonal stitching.",
+      "price": 7999,
+      "brand": "Puma",
+      "image": "/Puma-03.avif",
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "title": "ForeverRun NITRO 2 Men's Comfort Running Shoes",
+      "desc": "Designed for those who chase the road ahead with purpose, these running shoes deliver more than just speed. ",
+      "price": 14999,
+      "brand": "Puma",
+      "image": "/Puma-04.avif",
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "title": "Electrify NITRO 4 Women's Multi-Surface Traction Running Shoes",
+      "desc": "The Electrify NITRO 4 is built for everyday runners who want lightweight comfort with powerful propulsion. ",
+      "price": 8999,
+      "brand": "Puma",
+      "image": "/Puma-05.avif",
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "title": "Deviate NITRO™ 3 Men's Running Shoes",
+      "desc": "Experience unparalleled propulsion in your everyday training runs with the Deviate NITRO™ 3. ",
+      "price": 15999,
+      "brand": "Puma",
+      "image": "/Puma-06.avif",
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "title": "CA Pro Classic Leather Sneakers",
+      "desc": "Elevate your street-style game with these heritage-inspired leather sneakers.",
+      "price": 4799,
+      "brand": "Puma",
+      "image": "/Puma-07.avif",
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "title": "MagMax NITRO™ Women's Maximum Cushioning Running Shoes",
+      "desc": "Experience an exhilarating bounce like never before with the MagMax NITRO™.",
+      "price": 17999,
+      "brand": "Puma",
+      "image": "/Puma-08.avif",
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "title": "KING ULTIMATE FG/AG Football Boots",
+      "desc": "Let everyone know: there’s a new KING in town. This football boot lives up to its name",
+      "price": 14399,
+      "brand": "Puma",
+      "image": "/Puma-09.avif",
+      "quantity": 1
+    }
+  ]
 }

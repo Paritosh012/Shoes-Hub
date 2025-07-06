@@ -8,6 +8,9 @@ const MyNavbar = () => {
         <Navbar.Brand as={Link} to="/" className="fw-bold">
           <i className="fa-brands fa-stripe-s"></i> Shoe-Hub
         </Navbar.Brand>
+            <Nav.Link as={Link} to="/home">
+              Home
+            </Nav.Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
