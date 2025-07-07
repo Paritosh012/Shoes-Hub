@@ -164,5 +164,171 @@
       "image": "/Puma-09.avif",
       "quantity": 1
     }
+  ],
+  "addidas": [
+    {
+      "id": 19,
+      "title": "Pureboost 5 Running Shoes",
+      "desc": "From your morning run to afternoon errands, feel energized all day in these adidas running shoes.",
+      "price": 10399,
+      "brand": "Addidas",
+      "image": "/Addi-01.avif",
+      "quantity": 1
+    },
+    {
+      "id": 20,
+      "title": "ULTRABOOST 1.0 SHOES",
+      "desc": "From a walk in the park to a weekend run with friends, these adidas Ultraboost 1.0 shoes are designed to keep you comfortable. ",
+      "price": 9899,
+      "brand": "Addidas",
+      "image": "/Addi-02.avif",
+      "quantity": 1
+    },
+    {
+      "id": 21,
+      "title": "Alphaboost V2 Shoes",
+      "desc": "A sleek design makes these adidas shoes your go-to whether you're pounding the pavement or hitting the town.",
+      "price": 9599,
+      "brand": "Addidas",
+      "image": "/Addi-03.avif",
+      "quantity": 1
+    },
+    {
+      "id": 22,
+      "title": "RUN 70s 2.0 Shoes",
+      "desc": "These adidas sneakers bring a '70s vibe to your everyday look. The lightweight upper is lined for comfort while Cloudfoam cushioning keeps you powering through your routine.",
+      "price": 9599,
+      "brand": "Addidas",
+      "image": "/Addi-04.avif",
+      "quantity": 1
+    },
+    {
+      "id": 23,
+      "title": "Superstar II Shoes",
+      "desc": "The iconic adidas Superstar shoes are back. Step into 50 years of sport and street style with these low top sneakers. A smooth leather upper and rubber shell toe evoke memories of basketball courts and city streets. ",
+      "price": 9999,
+      "brand": "Addidas",
+      "image": "/Addi-05.avif",
+      "quantity": 1
+    },
+    {
+      "id": 24,
+      "title": "Gazelle Bold Shoes",
+      "desc": "It wouldn't be a list of adidas' most iconic shoes without the Gazelle. ",
+      "price": 11999,
+      "brand": "Addidas",
+      "image": "/Addi-06.avif",
+      "quantity": 1
+    },
+    {
+      "id": 25,
+      "title": "Handball Spezial Shoes",
+      "desc": "Go where your spirit moves you in these adidas sneakers. First released in 1979 for pro indoor courts and since adopted as street style icons, the low-profile Handball Spezial shoes channel an always-on retro vibe. ",
+      "price": 10999,
+      "brand": "Addidas",
+      "image": "/Addi-07.avif",
+      "quantity": 1
+    },
+    {
+      "id": 26,
+      "title": "Samba OG Shoes",
+      "desc": "Born on the pitch, the Samba is a timeless icon of street style.",
+      "price": 10999,
+      "brand": "Addidas",
+      "image": "/Addi-08.avif",
+      "quantity": 1
+    },
+    {
+      "id": 27,
+      "title": "MOUNTBEN STRIDE",
+      "desc": "Navigate uneven surfaces with men’s outdoor walking boots and shoes, from hiking boots and trail shoes to sandals for warm weather.",
+      "price": 5999,
+      "brand": "Addidas",
+      "image": "/Addi-09.avif",
+      "quantity": 1
+    }
+  ],
+  "redchief": [
+    {
+      "id": 28,
+      "title": "Red Chief Low Ankle Green Lace Free Loafers",
+      "desc": "Slip into all-day comfort and sharp looks with these premium Red Chief loafers.",
+      "price": 3949,
+      "brand": "Red Chief",
+      "image": "/RC-01.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 29,
+      "title": "Red Chief Genuine Leather High Ankle Lace Up Casual Shoes",
+      "desc": " Crafted from genuine leather, these high ankle shoes offer a blend of durability and style.",
+      "price": 4545,
+      "brand": "Red Chief",
+      "image": "/RC-02.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 30,
+      "title": "Red Chief Leather Low Ankle Slip",
+      "desc": "Experience the perfect blend of style and comfort with these leather loafers from Red Chief.",
+      "price": 2649,
+      "brand": "Red Chief",
+      "image": "/RC-03.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 31,
+      "title": "Red Chief Low Ankle Stylish Loafer ",
+      "desc": "Stylish loafers designed for the modern , offering a perfect fit and comfort.",
+      "price": 2149,
+      "brand": "Red Chief",
+      "image": "/RC-04.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 32,
+      "title": "Red Chief Genuine Leather Low Ankle Lace Up Casual Sneaker",
+      "desc": "Premium leather slip-ons perfect for both casual and semi-formal wear.",
+      "price": 2599,
+      "brand": "Red Chief",
+      "image": "/RC-05.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 33,
+      "title": "Red Chief Lightweight Brown Loafers",
+      "desc": "Soft soles and lightweight design make these loafers a go-to choice.",
+      "price": 1999,
+      "brand": "Red Chief",
+      "image": "/RC-06.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 34,
+      "title": "Red Chief Trendy Black Loafers",
+      "desc": "Trendy look with unmatched comfort for the modern explorer.",
+      "price": 2489,
+      "brand": "Red Chief",
+      "image": "/RC-07.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 35,
+      "title": "Red Chief Genuine Leather High Ankle Lace Up Black Casual Boots",
+      "desc": "Rugged and stylish, these boots are crafted from genuine leather for durability and comfort.",
+      "price": 2699,
+      "brand": "Red Chief",
+      "image": "/RC-08.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 36,
+      "title": "Red Chief Low Ankle Green Lace Free Loafers ",
+      "desc": "Engineered for effortless all-day wear with a polished finish.",
+      "price": 3499,
+      "brand": "Red Chief",
+      "image": "/RC-09.jpeg",
+      "quantity": 1
+    }
   ]
 }
