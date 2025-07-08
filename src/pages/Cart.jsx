@@ -59,36 +59,47 @@ const Cart = () => {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          padding: "20px",
-          justifyContent: "space-between",
-        }}
-      >
-        <h2>Total Amount : {netAmount} </h2>
-        <Button
-          variant="warning"
-          onClick={() => {
-            navigate("/checkout");
+      <div className="cart-header" style={{ flexDirection: "column" }}>
+        <div
+          className=""
+          style={{
+            display: "flex",
+            padding: "20px",
+            justifyContent: "space-between",
+          }}
+        ></div>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product Name</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total Amount</th>
+            </tr>
+          </thead>
+          <tbody>{ans}</tbody>
+        </Table>{" "}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            padding: "20px 50px",
           }}
         >
-          CheckOut
-        </Button>
+          <h2>Total Amount : {netAmount} </h2>
+          <Button
+            variant="warning"
+            onClick={() => {
+              navigate("/checkout");
+            }}
+          >
+            CheckOut
+          </Button>
+        </div>
       </div>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Product Name</th>
-            <th>Brand</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total Amount</th>
-          </tr>
-        </thead>
-        <tbody>{ans}</tbody>
-      </Table>
     </>
   );
 };

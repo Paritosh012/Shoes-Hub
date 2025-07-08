@@ -109,28 +109,30 @@ const Home = () => {
   );
 
   return (
-    <>
-      <BrandCarousel
-        items={productNike}
-        brandImage="./nike.svg"
-        brandName="Nike"
-      />
-      <BrandCarousel
-        items={productPuma}
-        brandImage="./puma.png"
-        brandName="Puma"
-      />
-      <BrandCarousel
-        items={productAdidas}
-        brandImage="./adidas.png"
-        brandName="Adidas"
-      />
-      <BrandCarousel
-        items={productRedchief}
-        brandImage="./redchief.png"
-        brandName="Red Chief"
-      />
-    </>
+    <div className="home-container">
+      <>
+        <BrandCarousel
+          items={productNike}
+          brandImage="./nike.svg"
+          brandName="Nike"
+        />
+        <BrandCarousel
+          items={productPuma}
+          brandImage="./puma.png"
+          brandName="Puma"
+        />
+        <BrandCarousel
+          items={productAdidas}
+          brandImage="./adidas.png"
+          brandName="Adidas"
+        />
+        <BrandCarousel
+          items={productRedchief}
+          brandImage="./redchief.png"
+          brandName="Red Chief"
+        />
+      </>
+    </div>
   );
 };
 
