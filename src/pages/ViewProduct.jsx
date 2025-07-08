@@ -8,14 +8,37 @@ import { addtoCart } from "../redux/cartSlice";
 const ViewProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [added, setAdded] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const loadData = async () => {
-    let api = `http://localhost:3000/nike?id=${id}`;
-
-    let res = await axios.get(api);
-    setProduct(res.data[0]);
+    try {
+      let res;
+      res = await axios.get(`http://localhost:3000/nike?id=${id}`);
+      if (res.data.length > 0) {
+        setProduct(res.data[0]);
+        return;
+      }
+      res = await axios.get(`http://localhost:3000/puma?id=${id}`);
+      if (res.data.length > 0) {
+        setProduct(res.data[0]);
+        return;
+      }
+      res = await axios.get(`http://localhost:3000/adidas?id=${id}`);
+      if (res.data.length > 0) {
+        setProduct(res.data[0]);
+        return;
+      }
+      res = await axios.get(`http://localhost:3000/redchief?id=${id}`);
+      if (res.data.length > 0) {
+        setProduct(res.data[0]);
+        return;
+      }
+      alert("Product not found in any brand.");
+    } catch (error) {
+      console.error("Error fetching product:", error);
+    }
   };
 
   useEffect(() => {
@@ -57,10 +80,15 @@ const ViewProduct = () => {
                     brand: product.brand,
                     quantity: product.quantity,
                   };
-                  dispatch(addtoCart(productInfo));
+                  if (!added) {
+                    dispatch(addtoCart(productInfo));
+                    setAdded(true);
+                  } else {
+                    navigate("/cart");
+                  }
                 }}
               >
-                Add to Cart
+                {added ? "Go to Cart" : "Add to Cart"}
               </Button>
               <Button variant="outline-secondary" onClick={() => navigate("/")}>
                 Back to Shop

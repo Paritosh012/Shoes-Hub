@@ -7,21 +7,21 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [productNike, setProductNike] = useState([]);
   const [productPuma, setProductPuma] = useState([]);
-  const [productAddidas, setProductAddidas] = useState([]);
-  const [productRedChief, setProductRedChief] = useState([]);
+  const [productAdidas, setProductAdidas] = useState([]);
+  const [productRedchief, setProductRedchief] = useState([]);
 
   const loadData = async () => {
     try {
-      const [nikeRes, pumaRes, addidasRes,redChiefRes] = await Promise.all([
+      const [nikeRes, pumaRes, addidasRes, redChiefRes] = await Promise.all([
         axios.get("http://localhost:3000/nike"),
         axios.get("http://localhost:3000/puma"),
-        axios.get("http://localhost:3000/addidas"),
+        axios.get("http://localhost:3000/adidas"),
         axios.get("http://localhost:3000/redchief"),
       ]);
       setProductNike(nikeRes.data);
       setProductPuma(pumaRes.data);
-      setProductAddidas(addidasRes.data);
-      setProductRedChief(redChiefRes.data);
+      setProductAdidas(addidasRes.data);
+      setProductRedchief(redChiefRes.data);
     } catch (error) {
       console.error("Failed to fetch products", error);
     }
@@ -33,12 +33,12 @@ const Home = () => {
 
   const myNav = useNavigate();
 
-  const toViewProduct = (id) => {
-    myNav(`/product/${id}`);
+  const toViewProduct = (brand) => {
+    myNav(`/${brand}`);
   };
   const BrandCarousel = ({ items, brandImage, brandName }) => (
     <>
-      <h1>
+      <h1 style={{ textAlign: "center", margin: "20px 0" }}>
         Match Your Outfit With
         <img
           src={brandImage}
@@ -64,7 +64,10 @@ const Home = () => {
         style={{ width: "100%", maxHeight: "500px" }}
       >
         {items.map((item) => (
-          <Carousel.Item key={item.id} onClick={() => toViewProduct(item.id)}>
+          <Carousel.Item
+            key={item.id}
+            onClick={() => toViewProduct(item.brand)}
+          >
             <div
               style={{
                 width: "100%",
@@ -77,6 +80,7 @@ const Home = () => {
             >
               <img
                 src={item.image}
+                loading="lazy"
                 alt={item.title}
                 style={{
                   maxHeight: "100%",
@@ -117,12 +121,12 @@ const Home = () => {
         brandName="Puma"
       />
       <BrandCarousel
-        items={productAddidas}
-        brandImage="./addidas.png"
-        brandName="Addidas"
+        items={productAdidas}
+        brandImage="./adidas.png"
+        brandName="Adidas"
       />
       <BrandCarousel
-        items={productRedChief}
+        items={productRedchief}
         brandImage="./redchief.png"
         brandName="Red Chief"
       />

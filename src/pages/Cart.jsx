@@ -1,32 +1,19 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Increase, Decrease, removeItem } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const [cartData, setCartdata] = useState([]);
   const dispatch = useDispatch();
   const CartData = useSelector((state) => state.mycart.cart);
   const navigate = useNavigate();
-
-  const loadData = async () => {
-    let api = `http://localhost:3000/cart`;
-    let res = await axios.get(api);
-    setCartdata(res.data);
-  };
-
-  useEffect(() => {
-    loadData();
-  }, []);
 
   let netAmount = 0;
 
   const ans = CartData.map((key) => {
     netAmount += key.price * key.quantity;
     return (
-      <> 
+      <>
         <tr>
           <td>
             <img

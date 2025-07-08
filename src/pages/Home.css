@@ -1,50 +1,237 @@
-/* General container styles */
-h1 {
-  text-align: center;
-  margin-top: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  color: #333;
+/* Navbar Container */
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  border-bottom: 3px solid #5a67d8;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Carousel container */
-.carousel {
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 50px auto;
-  max-width: 90%;
+/* Brand Logo */
+.navbar-brand {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
 }
 
-/* Image container */
-.carousel-item > div {
-  padding: 20px;
-  background-color: #fdfdfd;
-  transition: transform 0.3s ease-in-out;
+.navbar-brand:hover {
+  color: #f7fafc !important;
+  transform: scale(1.05);
 }
 
-.carousel-item:hover > div {
-  transform: scale(1.01); /* subtle zoom effect */
+.navbar-brand i {
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Caption styles */
-.carousel-caption {
-  color: #fff !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Navigation Links */
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  margin: 0 0.25rem;
 }
 
-.carousel-caption h5 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #f7fafc !important;
+  transform: translateY(-2px);
 }
 
-.carousel-caption p {
-  font-size: 1rem;
-  margin: 0;
+/* Search Input */
+.form-control {
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 25px !important;
+  padding: 0.75rem 1.25rem !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Navigation icons */
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  background: none !important;
+.form-control:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25) !important;
+  transform: scale(1.02);
 }
+
+.form-control::placeholder {
+  color: #a0aec0 !important;
+  font-style: italic;
+}
+
+/* Search Button */
+.btn {
+  background: linear-gradient(135deg, #4299e1 0%, #667eea 100%) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 10px rgba(66, 153, 225, 0.3) !important;
+  margin-left: 0.75rem;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #3182ce 0%, #5a67d8 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(66, 153, 225, 0.4) !important;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Cart Icon */
+.nav-link i.fa-cart-shopping {
+  font-size: 1.5rem !important;
+  color: #ffd700 !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover i.fa-cart-shopping {
+  color: #ffed4e !important;
+  transform: scale(1.1);
+}
+
+/* Navbar Toggle */
+.navbar-toggler {
+  border: 2px solid #ffffff !important;
+  border-radius: 6px !important;
+  padding: 0.25rem 0.5rem !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .form-control {
+    width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.3rem !important;
+  }
+
+  .form-control {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1rem !important;
+  }
+
+  .btn {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1.2rem !important;
+  } 
+}
+
+/* Animation for navbar collapse */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse.show {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+/* Additional hover effects */
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffd700;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-brand:hover::after {
+  width: 100%;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+.form-control:focus,
+.btn:focus,
+.nav-link:focus {
+  outline: 2px solid #ffd700 !important;
+  outline-offset: 2px !important;
+}
+
+/* Sticky navbar scroll effect */
+.navbar.scrolled {
+  padding: 0.5rem 0 !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Ensure content doesn't hide behind sticky navbar */
+body {
+  padding-top: 0 !important;
+}
+
+/* Optional: Add a subtle backdrop blur when scrolling */
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+  backdrop-filter: blur(10px);
+}
+
