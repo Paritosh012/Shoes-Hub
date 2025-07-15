@@ -93,7 +93,7 @@ const Cart = () => {
           <Button
             variant="warning"
             onClick={() => {
-              navigate("/checkout");
+              navigate(`/checkout`);
             }}
           >
             CheckOut

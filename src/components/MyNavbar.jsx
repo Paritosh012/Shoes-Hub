@@ -18,6 +18,7 @@ const MyNavbar = () => {
         <Nav.Link as={Link} to="/home">
           Home
         </Nav.Link>
+        
         <Form.Control
           type="text"
           value={txtData}
@@ -37,6 +38,9 @@ const MyNavbar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
+            <Nav.Link as={Link} to="/signup">
+          Login
+        </Nav.Link>
             <Nav.Link as={Link} to="/cart">
               <i className="fa-solid fa-cart-shopping"></i>
             </Nav.Link>

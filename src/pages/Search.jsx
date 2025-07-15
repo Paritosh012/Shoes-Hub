@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Button, Card } from "react-bootstrap";
@@ -6,6 +6,7 @@ import { Button, Card } from "react-bootstrap";
 const Search = () => {
   const { txtval } = useParams();
   const [results, setResults] = useState([]);
+  const navigate = useNavigate();
 
   const loadData = async () => {
     try {
@@ -30,14 +31,27 @@ const Search = () => {
             <Card.Title> {item.title} </Card.Title>
             <Card.Text>{item.decs}</Card.Text>
             <Card.Text>Price : {item.price}</Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Button
+              variant="primary"
+              onClick={() => {
+                navigate(`/product/${item.id}`);
+              }}
+            >
+              View Product
+            </Button>
           </Card.Body>
         </Card>
       </>
     );
   });
 
-  return <>{ans}</>;
+  return <>
+  
+  <div>
+    {ans}
+  </div>
+  
+  </>;
 };
 
 export default Search;

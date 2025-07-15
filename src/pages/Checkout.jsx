@@ -37,7 +37,6 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic Validation
     for (const key in formData) {
       if (formData[key] === "" && key !== "address2") {
         alert(`Please fill the ${key} field`);
@@ -58,7 +57,13 @@ const Checkout = () => {
       className="my-5"
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <h2 className="mb-4">Checkout</h2>
         <h5 className="text-success mb-4">Total Payable: ₹{netAmount}</h5>
       </div>
